@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>WebSocket Client</title>
+</head>
+<body>
+  <script>
+    const ws = new WebSocket('ws://localhost:3000'); // Replace 'localhost:3000' with your server address
+
+    ws.onopen = () => {
+      console.log('WebSocket connection opened.');
+    };
+
+    ws.onmessage = (event) => {
+      console.log('Message received:', event.data);
+    };
+
+    ws.onclose = () => {
+      console.log('WebSocket connection closed.');
+    };
+  </script>
+</body>
+</html>
